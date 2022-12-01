@@ -14,34 +14,14 @@
 </head>
 <body>
 <div class="container">
-    <!--form with validated email id-->
-    <form novalidated class="was-validated">
-        <div class="form-floating">
-            <input type="email" id="email" class="form-control" placeholder="please enter mail" required>
-            <label for="email">email</label>
-            <!--for invalid and valid valid-feedback//-->
-
-            <div class="invalid-feedback">invalid Email</div>
-            <div class="valid-feedback">Email successful enter</div>
-        </div>
-        <button>submit</button>
-
-
-    </form>
-</div>    
-<script>
-    // Validation check for mails//
-    
-    const form= document.querySelector('form')
-    form.addEventListener('submit',e =>{
-
-    
-    if(!form.checkValidity()){
-        e.preventDefault()
-    }
-    form.classList.add('wqs-validated')
-})
-</script>
+    <button class="btn btn-primary btn-sm">Submit</button>
+    <button class="btn btn-danger btn-lg" disabled>Testing</button>
+    <button class="btn btn-link">Link Button</button>
+    <a class="btn btn-link" href="#" >Link</a>
+    <a class="btn btn-primary disabled" >Link button disabled</a>
+    <!--data from bs(bootstap) togling function-->
+    <button class="btn btn-outline-primary" data-bs-toggle="button">toggle</button>
+</div>
     
 </body>
 
