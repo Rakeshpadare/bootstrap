@@ -13,32 +13,36 @@
 
 </head>
 <body>
-    <div class="container">
-        <table class="table table-danger">
-            <thread>
-                <tr class="table-primary">
-                    <th>First Name</th>
-                    <th>Last name</th>
-                    <th>age</th>
+<div class="container">
+    <!--form with validated email id-->
+    <form novalidated class="was-validated">
+        <div class="form-floating">
+            <input type="email" id="email" class="form-control" placeholder="please enter mail" required>
+            <label for="email">email</label>
+            <!--for invalid and valid valid-feedback//-->
 
-                </tr>
-            </thread>
-            <tr>
-                <td class="table-dark">Rakesh</td>
-                <td>Padare</td>
-                <td>26</td>
-            </tr>
-            <tr>
-                <td class="table-danger">yash</td>
-                <td>sharma</td>
-                <td>30</td>
-            </tr>
-        </table>
-    </div>
-     
- 
-   
+            <div class="invalid-feedback">invalid Email</div>
+            <div class="valid-feedback">Email successful enter</div>
+        </div>
+        <button>submit</button>
 
+
+    </form>
+</div>    
+<script>
+    // Validation check for mails//
+    
+    const form= document.querySelector('form')
+    form.addEventListener('submit',e =>{
+
+    
+    if(!form.checkValidity()){
+        e.preventDefault()
+    }
+    form.classList.add('wqs-validated')
+})
+</script>
+    
 </body>
 
 </html>
